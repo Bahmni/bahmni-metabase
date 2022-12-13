@@ -5,6 +5,7 @@ metadata:
 data:
 
   MB_HOST: "{{ .Values.config.MB_HOST }}"
+  MB_PORT: "{{ .Values.config.MB_PORT }}"
   MB_DB_TYPE: "{{ .Values.config.MB_DB_TYPE }}"
   MB_DB_DBNAME: "{{ .Values.config.MB_DB_DBNAME }}"
   MB_DB_PORT: "{{ .Values.config.MB_DB_PORT }}"

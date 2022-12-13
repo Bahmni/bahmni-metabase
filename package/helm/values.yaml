@@ -12,15 +12,15 @@ metadata:
 
 image:
   repository: bahmni
-  name: openmrs-db
-  tag: demo-latest
-
+  name: bahmni-metabase
+  tag: latest
 service:
   type: ClusterIP
   port: 3000
 
 config:
-  MB_HOST: ""
+  MB_HOST: "localhost"
+  MB_PORT: 3000
   MB_DB_TYPE: postgres
   MB_DB_DBNAME: "metabase"
   MB_DB_PORT:  5432
