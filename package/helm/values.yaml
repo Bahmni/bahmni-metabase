@@ -19,8 +19,6 @@ service:
   port: 3000
 
 config:
-  MB_HOST: "localhost"
-  MB_PORT: 3000
   MB_DB_TYPE: postgres
   MB_DB_DBNAME: ""
   MB_DB_PORT:  5432
