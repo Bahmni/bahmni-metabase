@@ -1,8 +1,7 @@
 name: Build and Publish bahmni-metabase Image
 on:
   push:
-    branches: 
-      - main
+    branches: main
 
 jobs:
   
@@ -19,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HELM_CHART_PATH: package/helm
-    # needs: Trivy
+    needs: Trivy
     steps:
       - uses: actions/checkout@v2
       - name: Set env.ARTIFACT_VERSION
@@ -39,6 +38,7 @@ jobs:
           no-cache: true
           push: true
           tags: bahmni/bahmni-metabase:${{env.ARTIFACT_VERSION}},bahmni/bahmni-metabase:latest
+
       - name: Update Version and Image Tag
         run: |
           yq --inplace '.image.tag = "${{ env.ARTIFACT_VERSION }}"' $HELM_CHART_PATH/values.yaml

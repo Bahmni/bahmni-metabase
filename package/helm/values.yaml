@@ -22,45 +22,31 @@ config:
   MB_HOST: "localhost"
   MB_PORT: 3000
   MB_DB_TYPE: postgres
-  MB_DB_DBNAME: "metabase"
+  MB_DB_DBNAME: ""
   MB_DB_PORT:  5432
   OPENMRS_DB_NAME: "openmrs"
   OPENMRS_DB_TYPE: "mysql"
 
-
-
 secrets:
-  MB_ADMIN_EMAIL: "admin@metabase.local"
-  MB_ADMIN_FIRST_NAME: "Admin"
-  MB_ADMIN_PASSWORD: "Admin@123"
-  MB_DB_USER: "metabase-user"
-  MB_DB_PASS: "password"
-  MB_DB_HOST: "metabasedb"
-  OPENMRS_DB_HOST: "openmrsdb"
-  OPENMRS_DB_USERNAME: "openmrs-user"
-  OPENMRS_DB_PASSWORD: "password" 
-
+  MB_ADMIN_EMAIL: ""
+  MB_ADMIN_FIRST_NAME: ""
+  MB_ADMIN_PASSWORD: ""
+  MB_DB_USER: ""
+  MB_DB_PASS: ""
+  MB_DB_HOST: ""
+  OPENMRS_DB_HOST: ""
+  OPENMRS_DB_USERNAME: ""
+  OPENMRS_DB_PASSWORD: "" 
 
 resources: {}
 
 autoscaling:
   enabled: false
-#  minReplicas: 1
-#  maxReplicas: 5
-#  targetCPUUtilizationPercentage: 80
+  # minReplicas: 1
+  # maxReplicas: 5
+  # targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
 
-# volumes:
-#   patientDocuments:
-#     capacity: "2Gi"
-#     claimName: openmrs-document-images-pvc
-#   patientImages:
-#     capacity: "2Gi"
-#     claimName: openmrs-patient-images-pvc
-#   initializerChecksums:
-#     capacity: "1Gi"
-#   clinicalForms:
-#     capacity: "1Gi"
 nodeSelector: {}
 affinity: {}
 tolerations: {}
