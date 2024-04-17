@@ -13,7 +13,7 @@ Metabase is an open-source business intelligence tool. Metabase lets you ask que
 
 You can save your questions, and group questions into handsome dashboards. Metabase also makes it easy to share questions and dashboards with the rest of your team.
 
-As a part of our initiative we have used [v0.44.6](https://hub.docker.com/layers/metabase/metabase/v0.44.6/images/sha256-527a30f88f79a90bba0951d352a9fcbdecbf5f1b011a41b30e7a074265549168?context=explore) version of Metabase image.
+As a part of our initiative we have used [v0.49.6](https://www.metabase.com/releases/metabase-49) version of Metabase image.
 
 # Admin user creation for Metabase
 The first user of metabase will be created as an Admin user and is pre-configured for [metabase profile](https://github.com/Bahmni/bahmni-docker/blob/master/bahmni-standard/docker-compose.yml) in the docker-compose.yml of bahmni-docker by adding the following [configurational data](https://bahmni.atlassian.net/wiki/spaces/BAH/pages/3117482143/Metabase+Configuration+docker) for admin.
