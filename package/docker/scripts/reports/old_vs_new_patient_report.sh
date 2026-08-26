@@ -1,11 +1,10 @@
+#!/bin/bash
 # This Source Code Form is subject to the terms of the Mozilla Public License,
 # v. 2.0. If a copy of the MPL was not distributed with this file, You can
 # obtain one at https://www.bahmni.org/license/mplv2hd.
 #
 # Copyright (C) OpenMRS Inc. OpenMRS is a registered trademark and the OpenMRS
 # graphic logo is a trademark of OpenMRS Inc.
-
-#!/bin/bash
 
 request=$(</app/scripts/reports/request/pie_chart_request.json)
 jq -c '.[]' /app/scripts/reports/request/old_vs_new_patient_input.json | while read i; do
