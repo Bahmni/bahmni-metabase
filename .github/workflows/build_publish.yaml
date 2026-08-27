@@ -1,7 +1,9 @@
 name: Build and Publish bahmni-metabase Image
 on:
   push:
-    branches: main
+    branches:
+      - main
+      - 'release-*'
     tags:
       - '[0-9]+.[0-9]+.[0-9]+'
 
