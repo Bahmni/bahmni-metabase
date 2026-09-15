@@ -14,7 +14,7 @@ SETUP_TOKEN=$(curl -s -m 5 -X GET \
     | jq -r '.["setup-token"]'
 )
 
-if [ $SETUP_TOKEN != '' ]
+if [ "$SETUP_TOKEN" != '' ] && [ "$SETUP_TOKEN" != "null" ]
 then
     create_admin_response=$(curl -s -w "%{http_code}" -X POST \
         -H "Content-type: application/json" \
@@ -29,7 +29,8 @@ then
         "prefs": {
             "allow_tracking": false,
             "site_name": "Bahmni Metabase"
-        }
+        },
+        "database": null
     }')
 
     STATUS=${create_admin_response: -3}
